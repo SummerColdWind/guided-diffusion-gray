@@ -3,6 +3,7 @@
 修改：
 1. 根据[issue](https://github.com/openai/improved-diffusion/issues/121)，修改适合灰度图训练
 2. 默认开启采样时的进度条
+3. 修改适合灰度图采样
 
 This is the codebase for [Diffusion Models Beat GANS on Image Synthesis](http://arxiv.org/abs/2105.05233).
 
