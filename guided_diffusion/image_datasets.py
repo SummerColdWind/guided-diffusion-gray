@@ -105,7 +105,9 @@ class ImageDataset(Dataset):
         with bf.BlobFile(path, "rb") as f:
             pil_image = Image.open(f)
             pil_image.load()
-        pil_image = pil_image.convert("RGB")
+        # pil_image = pil_image.convert("RGB")
+        arr = np.array(pil_image)  # add this line
+        arr = arr.reshape((arr.shape[0], arr.shape[1], 1))  # add this line
 
         if self.random_crop:
             arr = random_crop_arr(pil_image, self.resolution)
