@@ -61,14 +61,14 @@ def create_argparser():
     defaults = dict(
         data_dir="",
         schedule_sampler="uniform",
-        lr=1e-4,
+        lr=1e-5,
         weight_decay=0.0,
         lr_anneal_steps=0,
         batch_size=1,
         microbatch=-1,  # -1 disables microbatches
         ema_rate="0.9999",  # comma-separated list of EMA values
         log_interval=10,
-        save_interval=10000,
+        save_interval=1000,
         resume_checkpoint="",
         use_fp16=False,
         fp16_scale_growth=1e-3,
